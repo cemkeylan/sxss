@@ -32,5 +32,10 @@ what have you) the following line.
 
     sxss &
 
+You can change the idle screen duration with xset(1).
+
+    $ xset s SECOND
+    $ xset s 300
+
 
 [1]: https://git.suckless.org/xssstate
