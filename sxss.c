@@ -19,21 +19,21 @@ static void spawn(char *const argv[]) {
   }
 }
 
+void die(const char *str) {
+  printf("%s\n", str);
+  exit(1);
+}
+
 
 int main(int argc, char *argv[]) {
   XScreenSaverInfo *info;
   Display *dpy;
   int base, errbase;
 
-  if(!(dpy = XOpenDisplay(0))) {
-    printf("Cannot open display.\n");
-    exit(1);
-  }
+  if(!(dpy = XOpenDisplay(0))) die("Cannot open display.");
 
-  if (!XScreenSaverQueryExtension(dpy, &base, &errbase)) {
-    printf("Screensaver extension not activated.\n");
-    exit(1);
-  }
+  if (!XScreenSaverQueryExtension(dpy, &base, &errbase))
+    die("Screensaver extension not activated.");
 
   while(1) {
 
