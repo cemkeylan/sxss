@@ -14,7 +14,7 @@ config.h: config.def.h
 	cp config.def.h config.h
 
 clean:
-	${RM} sxss
+	rm -f sxss
 
 install: all
 	mkdir -p ${DESTDIR}${BINDIR}
@@ -22,6 +22,6 @@ install: all
 	chmod 755 ${DESTDIR}${BINDIR}/sxss
 
 uninstall:
-	${RM} ${DESTDIR}${BINDIR}/sxss
+	rm -f ${DESTDIR}${BINDIR}/sxss
 
 .PHONY: all clean install uninstall
