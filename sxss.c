@@ -8,6 +8,8 @@
 
 #include "config.h"
 
+#define VERSION "0.1.0"
+
 static void spawn(char *const argv[]) {
   switch (fork()) {
   case 0:
@@ -26,6 +28,9 @@ void die(const char *str) {
 
 
 int main(int argc, char *argv[]) {
+
+  if (argc > 1) die("sxss-"VERSION);
+
   XScreenSaverInfo *info;
   Display *dpy;
   int base, errbase;
