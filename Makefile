@@ -5,6 +5,8 @@ BINDIR = ${PREFIX}/bin
 LIBS   = -lXss -lX11 -lc
 CC     = cc
 
+CFLAGS = -std=c99 -Wpedantic -Wall -Os
+
 all: sxss
 
 sxss: config.h sxss.c
