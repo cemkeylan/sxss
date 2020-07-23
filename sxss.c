@@ -42,7 +42,7 @@ main(int argc, char *argv[])
 	Display *dpy;
 	int base, errbase;
 
-	if(!(dpy = XOpenDisplay(0))) die("Cannot open display.");
+	if (!(dpy = XOpenDisplay(0))) die("Cannot open display.");
 
 	if (!XScreenSaverQueryExtension(dpy, &base, &errbase))
 		die("Screensaver extension not activated.");
