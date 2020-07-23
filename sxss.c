@@ -27,7 +27,7 @@ spawn(char *const argv[])
 static void
 die(const char *str)
 {
-	printf("%s\n", str);
+	fprintf(stderr, "%s\n", str);
 	exit(1);
 }
 
